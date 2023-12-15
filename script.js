@@ -1,5 +1,11 @@
 const icons = document.querySelectorAll(".section-1__icon i");
 
+document.querySelector(".menu").addEventListener("click", () => {
+  document.querySelectorAll(".target").forEach((item) => {
+    item.classList.toggle('visible');
+  });
+});
+
 let i = 1;
 
 setInterval(() => {
