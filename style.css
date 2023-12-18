@@ -1,3 +1,5 @@
+/* <<<<<<<<<<<<<<<<<<< Start of universal truth >>>>>>>>>>>>>>>> */
+
 * {
   margin: 0;
   padding: 0;
@@ -16,6 +18,20 @@ a:visited {
   text-decoration: none;
 }
 
+.section-header {
+  font-size: 12rem;
+  text-transform: capitalize;
+  color: #fff;
+  text-align: center;
+  font-weight: 900;
+  letter-spacing: 0.5rem;
+  text-shadow: 0.3rem 0.3rem 0.3rem #000;
+}
+
+/* <<<<<<<<<<<<<<<<<<< end of universal truth >>>>>>>>>>>>>>>> */
+
+
+
 /* <<<<<<<<<<<<<<<<<<< start of nav >>>>>>>>>>>>>>>> */
 
 .navbar {
@@ -30,6 +46,8 @@ a:visited {
   justify-content: center;
   align-items: center;
   box-shadow: 0.2rem 0.2rem 0.2rem #000;
+
+  transition: top 0.4s;
 }
 
 .navbar-link {
@@ -58,6 +76,11 @@ a:visited {
   margin-top: 0.5rem;
 }
 
+.navbar.visible {
+  top: 0;
+  transition: top 0.4s 0.2s;
+}
+
 .menu {
   width: 4rem;
   height: 6rem;
@@ -68,6 +91,7 @@ a:visited {
   border-radius: 30rem 30rem 15rem 15rem;
   box-shadow: 0.1rem 0.1rem 0.1rem #000, -0.1rem -0.1rem 0.1rem #000;
   cursor: pointer;
+  transition: top 0.4s 0.2s;
 }
 
 .menu::before {
@@ -79,6 +103,11 @@ a:visited {
   top: -15rem;
   left: calc(50% - 0.15rem);
   box-shadow: 0.1rem 0 0.1rem #000;
+}
+
+.menu.visible {
+  top: 15rem;
+  transition: top 0.4s;
 }
 
 /* <<<<<<<<<<<<<<<<<<< end of nav >>>>>>>>>>>>>>>> */
@@ -93,16 +122,6 @@ a:visited {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-}
-
-.section-header {
-  font-size: 12rem;
-  text-transform: capitalize;
-  color: #fff;
-  text-align: center;
-  font-weight: 900;
-  letter-spacing: 0.5rem;
-  text-shadow: 0.3rem 0.3rem 0.3rem #000;
 }
 
 .section-1__icon i {
@@ -234,28 +253,13 @@ a:visited {
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
-
+  
   margin-top: 10rem;
 }
 
 .gallery-link {
   position: relative;
   margin: 4rem 1rem;
-}
-
-.gallery-link::after {
-  content: "";
-  position: absolute;
-  top: 2vw;
-  left: 80%;
-  width: 0.2rem;
-  height: 0;
-  background-color: #fff;
-  transition: height 0.5s;
-}
-
-.gallery-link:hover::after {
-  height: 80%;
 }
 
 .gallery-link::before {
@@ -272,6 +276,21 @@ a:visited {
 
 .gallery-link:hover::before {
   width: 90%;
+}
+
+.gallery-link::after {
+  content: "";
+  position: absolute;
+  top: 2vw;
+  left: 80%;
+  width: 0.2rem;
+  height: 0;
+  background-color: #fff;
+  transition: height 0.5s;
+}
+
+.gallery-link:hover::after {
+  height: 80%;
 }
 
 .food-img {
@@ -415,3 +434,5 @@ a:visited {
 }
 
 /* <<<<<<<<<<<<<<<<<<< End of section 4 >>>>>>>>>>>>>>>> */
+
+
